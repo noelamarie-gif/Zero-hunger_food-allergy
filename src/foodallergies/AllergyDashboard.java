@@ -6,9 +6,16 @@ package foodallergies;
 
 /**
  *
- * @author user
+ * @author Marie Noela
  */
 public class AllergyDashboard extends javax.swing.JFrame {
+
+    private String fullName;
+
+    public AllergyDashboard(String fullName) {
+        initComponents();
+        this.fullName = fullName;
+    }
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AllergyDashboard.class.getName());
 
@@ -36,6 +43,7 @@ public class AllergyDashboard extends javax.swing.JFrame {
         btnFindFood = new javax.swing.JButton();
         btnRecipes = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        btnBackToMainMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,8 +78,20 @@ public class AllergyDashboard extends javax.swing.JFrame {
         });
 
         btnRecipes.setText("Healthy Recipe Suggestions");
+        btnRecipes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRecipesActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("SDG 2 – Zero Hunger | Food for Everyone");
+
+        btnBackToMainMenu.setText("Back to Main Menu");
+        btnBackToMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackToMainMenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -101,7 +121,10 @@ public class AllergyDashboard extends javax.swing.JFrame {
                             .addComponent(btnRegisterAllergies)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(177, 177, 177)
-                        .addComponent(jLabel3)))
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(228, 228, 228)
+                        .addComponent(btnBackToMainMenu)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -122,7 +145,9 @@ public class AllergyDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnManageProfile)
                     .addComponent(btnRecipes))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(btnBackToMainMenu)
+                .addGap(46, 46, 46)
                 .addComponent(jLabel3)
                 .addContainerGap())
         );
@@ -159,10 +184,26 @@ public class AllergyDashboard extends javax.swing.JFrame {
 
     private void btnFindFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindFoodActionPerformed
         // TODO add your handling code here:
-        FindSuitableFood food = new FindSuitableFood();
+        FindSuitableFood food = new FindSuitableFood(this.fullName);
         food.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnFindFoodActionPerformed
+
+    private void btnRecipesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecipesActionPerformed
+        // TODO add your handling code here:
+        HealthyRecipeSuggestions recipes = new HealthyRecipeSuggestions(this.fullName);
+
+        recipes.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRecipesActionPerformed
+
+    private void btnBackToMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackToMainMenuActionPerformed
+        // TODO add your handling code here:
+        com.mycompany.zerohunger.ZeroHunger mainMenu = new com.mycompany.zerohunger.ZeroHunger();
+
+        mainMenu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBackToMainMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +231,7 @@ public class AllergyDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBackToMainMenu;
     private javax.swing.JButton btnFindFood;
     private javax.swing.JButton btnManageProfile;
     private javax.swing.JButton btnRecipes;

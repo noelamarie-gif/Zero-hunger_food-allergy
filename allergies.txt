@@ -9,3 +9,50 @@ Severity: Moderate
 Dietary Preferences: Vegan, 
 Additional Information: 
 -----------------------------------
+Allergies: Peanuts, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+-----------------------------------
+Name: marie
+Allergies: Peanuts, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+--------------------------------
+Name: John Doe
+Allergies: Peanuts, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+--------------------------------
+Name: Marie
+Allergies: Peanuts, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+--------------------------------
+Name: Noela
+Allergies: Milk/Dairy, 
+Severity: Moderate
+Dietary Preferences: 
+Additional Information: 
+--------------------------------
+Name: Abuin
+Allergies: Soy, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+--------------------------------
+Name: Aniel
+Allergies: Peanuts, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+--------------------------------
+Name: Mark
+Allergies: Milk/Dairy, 
+Severity: Severe
+Dietary Preferences: 
+Additional Information: 
+--------------------------------

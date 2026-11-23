@@ -8,3 +8,4 @@ Chicken,Protein,Chicken
 Lentils,Protein,Lentils
 Almonds,Snacks,Almonds
 Vegetable Soup,Meals,Carrot;Spinach;Onion
+Peanut Butter,Snacks,Peanuts
